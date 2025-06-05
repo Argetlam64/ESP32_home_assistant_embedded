@@ -4,8 +4,8 @@
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
 
-const char* ssid = "A1-D575B0";
-const char* password = "DDXJCJPDBF";
+const char* ssid = "SSSID";
+const char* password = "PASSWORD";
 WiFiServer server(80);
 
 String PC_IP = "192.168.1.100:8080";//out current IP
@@ -13,9 +13,6 @@ String tasksEndpoint = "tasks?user=Maj";//where to request to get tasks
 String backEnd = "http://" + PC_IP + "/";//easier requesting
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);  // set the LCD address to 0x27 for a 20 chars and 4 line display
-//lcd.setCursor(col,row);
-//lcd.print("Text!");
-//lcd.clear();
 
 //variables for real data and comparission data (when updating)
 JsonDocument data;
